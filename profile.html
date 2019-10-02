@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BlogNT </title>
+    <link href='image/favicon.ico' rel='icon' type='image/x-icon' />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    <script src="js/all.min.js"></script>
+    <script src="js/brands.min.js"></script>
+    <script src="js/solid.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        
+        <!-- taskbar menu-->
+        <nav class="navbar navbar-expand-lg bg-light navbar-light menu_main fixed-top ">
+            <a class="navbar-brand">
+                <img class="img-fluid" src="image/logo_small.png" />
+            </a>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item menu_item">
+                    <a class="nav-link" title="Ngày ta yêu nhau">
+                        <img src="image/calendar.png" />
+                    </a>
+                </li>
+                <li class="nav-item menu_item">
+                    <a class="nav-link" title="Tin nhắn" id="dropdownmessage" data-toggle="dropdown">
+                        <img src="image/speech-bubble.png" />
+                    </a>
+                    <div class="dropdown-menu menu_chat" aria-labelledby="dropdownmessage" aria-haspopup="true"
+                        aria-expanded="false">
+                        <div class="dropdown-item">
+                            <ul class="list-inline user_chat">
+                                <li class="list-inline-item">
+                                    <img src="image/another_avatar.jpg" class="rounded-circle avatar">
+                                </li>
+                                <li class="list-inline-item">
+                                    <p class=""><b>Tuyền Võ</b></p>
+                                </li>
+                            </ul>
+                            <span class="content_chat">Anh ăn chưa ?</span>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="nav-item menu_item" style="margin-right: 20px;">
+                    <a class="nav-link" title="Thông báo" id="dropdownnotification" data-toggle="dropdown">
+                        <img src="image/notification.png" />
+                    </a>
+                    <div class="dropdown-menu menu_chat" aria-labelledby="dropdownnotification" aria-haspopup="false"
+                        aria-expanded="false">
+                        <a class="dropdown-item" href="#" style="background-color: #f8f9fa">
+                            <img src="image/another_avatar.jpg" class="rounded-circle avatar">
+                            <span class="content_notification"> <b>Tuyền Võ</b> đã thích bài viết của bạn</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <img src="image/another_avatar.jpg" class="rounded-circle avatar">
+                            <span class="content_notification"> <b>Tuyền Võ</b> đã trả lời bình luận của bạn</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="row user" id="dropdownmenu" data-toggle="dropdown">
+                        <a class="nav-link">
+                            <img class="rounded-circle img-fluid avatar" src="image/avatar.jpg" />
+                            <span class="name_login">Nhân Võ</span>
+                            <i class="fas fa-sort-down" style="margin-bottom: 4px; margin-left: 2px;"></i>
+                        </a>
+                    </div>
+                    <div class="dropdown-menu menu_option" aria-labelledby="dropdownmenu" aria-haspopup="false"
+                        aria-expanded="false">
+                        <a class="dropdown-item" href="#">Trang Cá Nhân</a>
+                        <a class="dropdown-item" href="#">Album Ảnh</a>
+                        <a class="dropdown-item" href="#">Đăng Xuất</a>
+                    </div>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <section style="margin-top: 80px;">
+        <div class="container">
+            <div class="row profile">
+                <!--Infor profile-->
+                <div class="col-3 profile_left">
+                    <div class="card">
+                        <img src="image/avatar.jpg" alt="Nhân Võ" class="img-fluid">
+                        <h2 class="text-center">Nhân Võ</h2>
+                        <p class="title">Now or Never</p>
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Tin nhắn
+                                <span class="badge badge-primary badge-pill">12</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Bài viết
+                                <span class="badge badge-primary badge-pill">50</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Hình ảnh
+                                <span class="badge badge-primary badge-pill">99</span>
+                            </li>
+                        </ul>
+                        <p><button>Chỉnh sửa cá nhân</button></p>
+                    </div>
+                </div>
+                <!--Background-->
+                <div class="col-9 profile_right">
+
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#poster">
+                                <img src="image/writing.png" />
+                                <label>Timeline</label>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#profile">
+                                <img src="image/resume.png" />
+                                <label>Giới thiệu</label>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#album">
+                                <img src="image/album.png" />
+                                <label>Album ảnh</label>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+
+                        <div class="tab-pane container active" id="poster">
+                            <div class="content_poster">
+                                <div class="row post_status">
+                                    <input class="form-control form_comment" />
+                                </div>
+                                <div class="post_item">
+                                    <!-- user -->
+                                    <div class="row" style="padding: 10px 10px 0px 10px;">
+                                        <div class="col-md-10 col-xs-10 col-lg-10">
+                                            <div class="row">
+                                                <div class="col-1">
+                                                    <a href="">
+                                                        <img class="rounded-circle avatar_post" title="Tuyền Võ"
+                                                            src="image/another_avatar.jpg" />
+                                                    </a>
+                                                </div>
+                                                <div class="col-11">
+                                                    <a href="">
+                                                        <span class="name_post">Tuyền Võ</span>
+                                                    </a>
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item" title="12/06/1997">2 ngày</li>
+                                                        <li class="list-inline-item" title="Công khai"><img
+                                                                src="image/internet.png" /></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 text-right">
+                                            <i class="fas fa-ellipsis-h option_post"></i>
+                                        </div>
+                                    </div>
+                                    <!-- content -->
+                                    <p class="content_post">Giới thiệu cho anh em nào "chưa biết" bảo bối giúp xả stress
+                                        nhanh lại
+                                        tăng Stamina, strength và cơ bắp . Ngoài ra anh em nào gầy như tôi cũng rất dễ
+                                        tăng cân vì
+                                        tập xong ăn khoẻ hơn ( anh em nào béo thì cũng có thể giảm cân , cứ miễn là
+                                        cường độ tiêu
+                                        hao cao hơn hấp thụ)
+
+                                        Thật ra anh em nào đã và đang tập gym thì thấy tập cái này vào người lắm. Tuy
+                                        không liên
+                                        quan tới game ( mà chắc mấy ông lười còn nghiện game cũng chả quan tâm đâu) nên
+                                        anh em nào
+                                        đang đi làm phải ngồi nhiề... <a href="#">Xem thêm</a>
+                                    </p>
+                                    <!-- content image -->
+                                    <div id="demo" class="carousel slide" data-ride="carousel">
+
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="image/1.jpg" class="d-block w-100">
+
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="image/2.jpg" class="d-block w-100">
+
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="image/3.jpg" class="d-block w-100">
+
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </a>
+                                    </div>
+                                    <!-- button emotion-->
+                                    <ul class="list-inline emotion_post">
+                                        <li class="list-inline-item"><a href=""><img src="image/like.png" /></a></li>
+                                        <li class="list-inline-item"><a href=""><img src="image/comment.png" /></a></li>
+                                    </ul>
+                                    <span class="count_heart">5 heart</span>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control form_comment"
+                                            placeholder="Thêm bình luận">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">Đăng</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane container fade" id="profile">
+                            <div class="row">
+                                <div class="col-7">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <img src="image/suitcase.png" />
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <p>Làm việc tại Công ty cổ phần 689Cloud</p>
+                                                </li>
+                                            </ul>
+                                            <label class="time_profile">Từ 12/2018 đến 6/2019</label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <img src="image/mortarboard.png" />
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <p>SV tại Học Viện Công Nghệ Bưu Chính Viễn Thông</p>
+                                                </li>
+                                            </ul>
+                                            <label class="time_profile">Từ 8/2015 đến 6/2020</label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <img src="image/worldwide.png" />
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <p>Sống tại Thành phố Kon Tum</p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <img src="image/dating.png" />
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <p> Hẹn hò</p>
+                                                </li>
+                                            </ul>
+                                            <label class="time_profile">Từ 26 tháng 5, 2019</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-5">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <img src="image/smartphone.png" />
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <p>0397336794</p>
+                                                </li>
+                                            </ul>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <img src="image/mail.png" />
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <p>voducnhan1997@gmail.com</p>
+                                                </li>
+                                            </ul>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <img src="image/cake.png" />
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <p>12 tháng 6, 1997</p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane container fade" id="album">
+                            <div class="row album_test">
+                                <div class="column">
+                                  <img src="image/1.jpg" style="width:100%">
+                                  <div class="infor_album">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <img src="image/heart_full.png" />
+                                            <span class="count_hover">11</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <img src="image/comment_full.png" />
+                                            <span class="count_hover">0</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <div class="column">
+                                  <img src="image/3.jpg"  style="width:100%">
+                                  <div class="infor_album">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <img src="image/heart_full.png" />
+                                            <span class="count_hover">11</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <img src="image/comment_full.png" />
+                                            <span class="count_hover">0</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <div class="column">
+                                  <img src="image/3.JPG"  style="width:100%">
+                                  <div class="infor_album">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <img src="image/heart_full.png" />
+                                            <span class="count_hover">11</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <img src="image/comment_full.png" />
+                                            <span class="count_hover">0</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <div class="column">
+                                    <img src="image/3.JPG"  style="width:100%">
+                                    <div class="infor_album">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <img src="image/heart_full.png" />
+                                                <span class="count_hover">11</span>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img src="image/comment_full.png" />
+                                                <span class="count_hover">0</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                  </div>
+                                  <div class="column">
+                                    <img src="image/3.JPG"  style="width:100%">
+                                    <div class="infor_album">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <img src="image/heart_full.png" />
+                                                <span class="count_hover">11</span>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <img src="image/comment_full.png" />
+                                                <span class="count_hover">0</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                  </div>
+                              </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
